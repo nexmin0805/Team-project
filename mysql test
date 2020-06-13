@@ -1,0 +1,42 @@
+<?php
+    $host = 'localhost';
+    $user = 'root';
+    $pw = 'apmsetup';
+    $dbName = 'han';
+    $conn = new mysqli($host, $user, $pw, $dbName);
+ 
+    if($conn){
+        echo "MySQL 접속 성공";
+    }else{
+        echo "MySQL 접속 실패";
+    }
+$sql="select * from minseo";                         //test 테이블의 레코드를 모두 뽑아오기
+$sql_result=mysql_query($sql, $conn);          //질의(위 내용)를 수행하라.
+
+
+
+//mysql_result(쿼리실행결과, 행번호, 변수값) : 결과값을 행 단위로 화면에 출력해주는 함수.
+/*
+for($i=0; $i<$count; $i++)
+{
+    $num=mysql_result($sql_result, $i, idx);
+    $name=mysql_result($sql_result, $i, name);
+    
+    echo "$num : $name <br>";
+}
+*/
+?>
+<html>
+<head>
+<meta charset="utf-8">
+<title> 전화번호부 </title>
+</head>
+<body>
+	<table border="1">
+		<th>전화번호부</th>
+		<tr>
+			<td>이름</td><td>전화번호</td>
+		</tr>
+	</table>
+</body>
+</html>
