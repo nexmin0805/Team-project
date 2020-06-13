@@ -1,0 +1,21 @@
+void Address::inputPN()
+{
+    cin.getline(processNumber, sizeof(processNumber));
+
+    /* 사용자의 입력이 잘못 되면 반복해서 다시 받는다. */
+    while ((atoi(processNumber) != 1) && (atoi(processNumber) != 2)
+        && (atoi(processNumber) != 3) && (atoi(processNumber) != 4))
+    {
+        seletMenu();
+        cin.getline(processNumber, sizeof(processNumber));
+    }
+
+    if (atoi(processNumber) == 1)
+        readAddress();
+    else if (atoi(processNumber) == 2)
+        writeAddress();
+    else if (atoi(processNumber) == 3)
+        searchAddress();
+    else if (atoi(processNumber) == 4)
+        ProcessQuit();
+}
