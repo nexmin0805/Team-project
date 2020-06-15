@@ -1,0 +1,16 @@
+class Address
+{
+private:
+    char processNumber[10]; // Menu번호를 저장하는 변수
+    int quit; // 종료여부를 판단하기 위한 변수
+
+public:
+    void intro(); // 초기 화면을 출력하는 함수
+    void seletMenu(); // 메뉴선택을 요구하는 함수
+    void inputPN(); // 메뉴번호를 입력받아 처리하는 함수
+    void readAddress(); // 주소록을 읽는 함수
+    void writeAddress(); // 주소록에 쓰는 함수
+    void searchAddress(); // 주소록을 검색하는 함수
+    int checkQuit(); // quit의 값을 읽는 함수
+    void ProcessQuit(); // 프로그램을 종료하기 위한 함수
+};
