@@ -51,3 +51,4 @@
   
   ### 사이트 주소
   [활동 기록 사이트] (https://nayeon990315.github.io/nyeon990315.github.io-team_project/)
+  [전화번호부 사이트] (https://peacefulphonebook.netlify.app/)
