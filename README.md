@@ -48,3 +48,6 @@
   4) 링크드 리스트, 배열
   5) 파일 입출력
   6) 문자열 비료(검색, 삭제 시 사용)
+  
+  ### 사이트 주소
+  [활동 기록 사이트] (https://nayeon990315.github.io/nyeon990315.github.io-team_project/)
