@@ -1,0 +1,31 @@
+void Address::writeAddress()
+{
+    ofstream wAddress("주소록.txt", ios::app);//파일 끝에 데이터 추가.
+
+    /* 파일을 여는데 실패하면 프로그램을 종료. */
+    if (!wAddress)
+    {
+        cout << "주소록파일을 열 수 없습니다. \n";
+        quit = 1;
+    }
+    else
+    {
+        char name[20]; //이름
+        char address[100]; //주소
+        char handphone[20]; //핸드폰
+
+        cout << "\n";
+        cout << "이름입력 : ";
+        cin.getline(name, sizeof(name));
+        cout << "주소입력 : ";
+        cin.getline(address, sizeof(address));
+        cout << "핸드폰번호입력 : ";
+        cin.getline(handphone, sizeof(handphone));
+
+        wAddress << name << ", ";
+        wAddress << address << ", ";
+        wAddress << handphone << "\n";
+
+        wAddress.close(); // 파일을 닫습니다.
+    }
+}
