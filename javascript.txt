@@ -1,0 +1,42 @@
+<script>
+function Address(processNumber, quit) {
+    this.processNumber = processNumber;
+    this.quit = quit;
+}
+Address.prototype.intro() {
+    <!--프로그램 제목//-->
+			document.write("**********************************<br>");
+			document.write("<br>");
+    		document.write("     화목하조의 전화번호부          <br>");
+			document.write("<br>");
+    		document.write("**********************************<br>");
+}
+Address.prototype.seletMenu() {
+    <!--메뉴선택을 요구하는 함수//-->
+    document.write("<br>");
+    document.write("====MENU====<br>");
+    document.write("목록보기: 1 <br>");
+    document.write("입력하기: 2 <br>");
+    document.write("검색하기: 3 <br>");
+    document.write("종료하기: 4 <br>");
+    document.write("============ <br>");
+    document.write("메뉴를 선택하세요");
+}
+Address.prototype.inputPN() {
+
+}
+Address.prototype.readAddess() {
+
+}
+Address.prototype.writeAddress() {
+
+}
+Address.prototype.searchAddress() {
+
+}
+Address.prototype.checkQuit() {
+
+}
+Address.prototype.ProcessQuit() {
+
+}
