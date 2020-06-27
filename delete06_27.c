@@ -129,11 +129,8 @@ void delete()
         printf("존재하지 않는 정보입니다.");
         return;
     }
-    else
-    {
       char address[116];
       rewind(fp);
-      {
         long seek, start;
         while(1)
         {
@@ -144,22 +141,20 @@ void delete()
                 start = seek; 
             if (strstr(address, who) != NULL)
             {
-                long len = filelength(fileno(fp))-ftell(fp);
-                char *tmp = (char *)malloc(len);
-                len = fread(tmp, 1, len, fp);
+                long last = filelength(fileno(fp))-ftell(fp);
+                char *tmp = (char *)malloc(last);
+                last = fread(tmp, 1, last, fp);
             
                 fseek(fp, start, SEEK_SET);
-                fwrite(tmp, 1, len, fp);
+                fwrite(tmp, 1, last, fp);
                 fflush(fp);
                 free(tmp);
                 _chsize(fileno(fp), ftell(fp));
                      break;
             } 
         }
-    }
     rewind(fp);
     printf("\n삭제 완료\n");
 
     fclose(fp);
-    }
 }
