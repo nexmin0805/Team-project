@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<!--
+	Epilogue by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>화목하조의 전화번호부</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="inner">
+					<h1>PHONE BOOK</h1>
+					<h2>Made by 화목하조</h2>
+					<p>A free responsive site template by <a href="https://templated.co">TEMPLATED</a></p>
+				</div>
+			</header>
+
+
+			<script>function printminmin()
+			{var str = prompt("select menu", "목록보기: 1/입력하기: 2/ 검색하기: 3/종료하기: 4");} 
+			</script>
+
+			<script>function select(){
+				try{
+					var x = document.getElementById("number").value;
+					if(x=="") throw "입력없음";
+					if(isNan(x)) throw "error";
+					if(x==1) throw "목록보기";
+					if(x==2) throw "입력하기";
+					if(x==3) throw "검색하기";
+					if(x==4) throw "삭제하기";
+				}
+				catch(error){
+					var y = document.getElementById("message");
+					y.innerHTML = error;
+				}
+			}
+			</script>
+
+		<!-- Wrapper
+			<div id="wrapper">
+				<h3>MENU</h3>
+				<p>메뉴를 선택하세요. (목록보기: 1/입력하기: 2/ 검색하기: 3/삭제하기: 4)</p>
+				입력: 
+				<input type="text"  id = "user" size='5'>
+				<input type="button" value = "확인" onclick = "printminmin();"> -->
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<h3>MENU</h3>
+				<p>메뉴를 선택하세요. (목록보기: 1/입력하기: 2/ 검색하기: 3/삭제하기: 4)</p>
+				입력: 
+				<input type="text"  id = "user" size='5'>
+				<!-- <input type="button" value = "확인" onclick = "select();"> -->
+				<button type="button" onclick = "test()" >확인</button>
+
+
+		<script>
+			document.write("<br>**********************************<br>");
+			document.write("<br>");
+    		document.write("     화목하조의 전화번호부          <br>");
+			document.write("<br>");
+    		document.write("**********************************<br>");
+
+			
+		</script>
+				
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
