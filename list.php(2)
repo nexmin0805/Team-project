@@ -1,0 +1,23 @@
+<meta http-equiv=Content-Type content=text/html; charset=EUC-KR> 
+
+<?php
+$conn = mysqli_connect(
+  '127.0.0.1',
+  'root',
+  'apmsetup',
+  'han');
+
+$sql = "SELECT * FROM phonebook";
+$result = mysqli_query($conn, $sql);
+?>
+
+<table border=1>
+	<tr><td>이름</td><td>전화번호</td></tr>
+<?php
+while($row = mysqli_fetch_array($result)) {
+  echo "<tr><td>".$row['name']."</td>";
+  echo "<td>".$row['tel']."</td></tr>";
+}
+?>
+<tr><td colspan=2><a href="input.php">입력하기</a></td></tr>
+</table>
