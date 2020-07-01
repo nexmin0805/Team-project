@@ -1,0 +1,24 @@
+<meta http-equiv=Content-Type content=text/html; charset=EUC-KR> 
+
+<?php
+$conn = mysqli_connect(
+  '127.0.0.1',
+  'root',
+  'apmsetup',
+  'han');
+
+
+
+$sql = "insert into phonebook(name,tel)values('".$_POST['name']."','".$_POST['tel']."')";
+echo $sql;
+
+$result = mysqli_query($conn, $sql);
+
+
+?>
+
+<script>
+
+window.location.href="list.php";
+
+</script>
