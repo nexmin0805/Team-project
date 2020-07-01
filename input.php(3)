@@ -1,0 +1,24 @@
+<meta http-equiv=Content-Type content=text/html; charset=utf-8> 
+
+<?php
+$conn = mysqli_connect(
+  '127.0.0.1',
+  'root',
+  'apmsetup',
+  'han');
+
+$sql = "SELECT * FROM phonebook";
+$result = mysqli_query($conn, $sql);
+?>
+
+<table border=1>
+	<tr><td>name</td><td>phonenumber</td></tr>
+<?php
+while($row = mysqli_fetch_array($result)) {
+  echo "<tr><td>".$row['name']."</td>";
+  echo "<td>".$row['tel']."</td>";
+  echo "<td><a href='delete.php?sIDX=".$row['idx']."'>삭제</a></td></tr>";
+}
+?>
+<tr><td colspan=3><a href="input.php">insert</a></td></tr>
+</table>
